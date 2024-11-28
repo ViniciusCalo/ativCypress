@@ -1,38 +1,137 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+body {
+  background-size: cover; 
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex; 
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  min-height: 100vh; 
+  background-color: #000053e7;
 }
 
-.App-link {
-  color: #61dafb;
+.app-container {
+  min-width: 300px; 
+  background: #cbe50a; 
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 2px 8x 12px rgb(0, 0, 0); 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul{
+  margin: 0;
+  padding: 0;
 }
+
+h2,
+h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+}
+.checkbox-container .editspan{
+  font-size: 12px;
+  width: 50px;
+}
+
+.checkbox-container input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+.task-item {
+  background-color: #000053;
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-item .actions {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 15px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button.add-task {
+  background-color: #0fa7ff; 
+  color: black;
+  align-items: center;
+}
+
+button.add-task:hover {
+  background-color: #218838; 
+}
+
+button.edit-task {
+  background-color: #cbe50a; 
+  border: 1px black solid;
+  color: black;
+  margin-left: 10px;
+}
+
+button.edit-task:hover {
+  background-color: hsla(121, 84%, 48%, 0.719); 
+}
+
+button.delete-task {
+  background-color: #cbe50a;
+  border: 1px black solid;
+  color: black;
+}
+
+button.delete-task:hover {
+  background-color: #c40316;
+}
+
+span.completed {
+  color: #28a745;
+}
+
+span.pending {
+  color: hsl(56, 51%, 56%);
+}
+
+button.save-task {
+  background-color: #6a82ff;
+  color: black;
+  margin-right: 5px;
+}
+
+button.save-task:hover {
+  background-color: #28a745;
+}
+
+button.cancel-task {
+  background-color: #6a82ff;
+  color: black;
+}
+
+button.cancel-task:hover {
+  background-color: #c40316;
+}
+
